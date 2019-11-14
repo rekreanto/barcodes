@@ -1,0 +1,142 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-family: sans-serif;
+	line-height: 1.4142em;
+
+	box-sizing: border-box;
+}
+
+* {
+	box-sizing: inherit;
+	transition: all 0.155s ease-out;
+}
+
+
+* {
+	transition: all 225ms;
+}
+
+body {
+	background-color: #efefef;
+	width: 100%;
+	height: 100%;
+}
+
+#disp {
+	position: relative;
+}
+#help-link, #help-text{
+	padding: 10px;
+	z-index: 1000;
+}
+#help-link {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+#help-text {
+	background-color: white;
+	padding: 20px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+#shadow {
+	position: fixed;
+	top:0;
+	left:0;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity: 0.3;
+	margin: 0;
+	padding: 0;
+	z-index: 999;
+
+
+}
+main {
+	display: flex;
+	flex-direction: row;
+
+}
+
+@media screen {
+	textarea.input {
+		padding: 20px 0 20px 20px;
+		width:100%;
+		height: 100%;
+		background-color: #fff;
+	}
+
+	#disp {
+		flex: 1 0 auto;
+		background-color: white;
+	}
+	#output {
+		padding: 0;
+    font-family: monospace;
+    white-space: pre-wrap;
+	}
+	#disp, #output {
+		flex-basis: 48%;
+		border: 1px solid black;
+	}
+	#control {
+		flex-basis: 3%;
+		align-self: center;
+	}
+	#control button {
+		background-color: black;
+		color: white;
+		height: 100%;
+		padding: 10px;
+		margin: 10px;
+	}
+	#output {
+		flex-basis: 48%;
+		background-color: #fff;
+		padding: 20px;
+
+		width: 170mm;
+		height: 240mm;
+		font-weight: bold;
+	}
+
+	#control {
+		width:100%;
+		text-align:right;
+	}
+
+}
+
+.err {
+    color:red;
+    background-color:white;
+    position:relative;
+    top:-30px;
+    left:10px;
+    width:100px;
+
+
+}
+
+@media print {
+	#disp {
+		display:none;
+	}
+
+	#output {
+		background-color: #fff;
+		border: none;
+		width: 170mm;
+		font-weight: bold;
+    font-family: monospace;
+    white-space: pre-wrap;
+
+	}
+
+}
