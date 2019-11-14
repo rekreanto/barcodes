@@ -10,13 +10,13 @@ html, body {
 
 * {
 	box-sizing: inherit;
-	transition: all 0.155s ease-out;
+	transition: opacity 0.155s ease-out;
 }
 
 
-* {
+/* * {
 	transition: all 225ms;
-}
+}*/
 
 body {
 	background-color: #efefef;
@@ -36,15 +36,15 @@ button {
 	font-family:'Roboto',sans-serif;
 	font-weight:300;
 	color:#FFFFFF;
-	background-color:#4095c6;
+	background-color:#1055a6;
 	text-align:center;
 	transition: all 0.1s;
 }
-button:hover{
+button:hover {
 	background-color:#3055a6;
 }
-button:active{
-	background-color:#1055a6;
+button:active {
+	background-color:#4095c6;
 }
 
 
@@ -53,15 +53,17 @@ button:active{
 #disp {
 	position: relative;
 }
+#help-link {
+	font-size: 1.5rem;
+}
 #help-link, #help-text{
 	padding: 10px;
 	z-index: 1000;
+	margin: 0.5em;
 }
 #help-link {
 	display: block;
-	position: absolute;
-	top: 0;
-	right: 0;
+	position: relative;
 }
 #help-text {
 	background-color: white;

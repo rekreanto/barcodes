@@ -5,20 +5,28 @@ var INPUT = "barcode_generator_input";
 
 function setup(){
 	// help text
-	var showHelp = function(){$("#help-text").show(); $("#help-link").text("x");$("#shadow").css("display", "block");}
-	var hideHelp = function(){$("#help-text").hide(); $("#help-link").text("?");$("#shadow").css("display", "none");}
-	var toggle = function(a,b){
+	var showHelp = function(){
+		$("#help-text").show();
+		$("#help-link").text("x").css("color","white");
+		$("#shadow").css("display", "block").css("opacity", "0.3");;
+	};
+	var hideHelp = function(){
+		$("#help-text").hide();
+		$("#help-link").text("?").css("color","black");;
+		$("#shadow").css("display", "none").css("opacity", "0");
+	};
+	var toggleHelp = (function(a,b){
 		var transitions = [a,b];
 		var state = 0;
-		return (function transit(e){
+		return (function TOGGLE(e){
 			e.preventDefault();
 			transitions[state]();
 			state = 1-state;
 		});
-	};
+	})(showHelp,hideHelp);;
 	hideHelp();
-	$("#shadow").click(hideHelp);
-	$("#help-link").click( toggle(showHelp, hideHelp) );
+	$("#shadow").click( toggleHelp );
+	$("#help-link").click( toggleHelp );
 
 
 	inpField = $("textarea.input");

@@ -84,7 +84,7 @@ function barcode2rects(rs){
 //rects2svg:: rects, ean -> svg
 function rects2svg(rs,digits,scale){ var ok, rects, svg;
     ok = EAN13.valid(digits);
-    console.log("OK?",digits,ok)
+    //console.log("OK?",digits,ok)
 
 	scale=scale||1;
 	rects=[
