@@ -24,6 +24,32 @@ body {
 	height: 100%;
 }
 
+
+
+button {
+	display:inline-block;
+	padding:0.5em 1.2em;
+	margin:0.3em;
+	border-radius:0.5em;
+	box-sizing: border-box;
+	text-decoration:none;
+	font-family:'Roboto',sans-serif;
+	font-weight:300;
+	color:#FFFFFF;
+	background-color:#4eb5f1;
+	text-align:center;
+	transition: all 0.1s;
+}
+button:hover{
+	background-color:#4095c6;
+}
+button:active{
+	background-color:#3055a6;
+}
+
+
+
+
 #disp {
 	position: relative;
 }
@@ -55,8 +81,6 @@ body {
 	margin: 0;
 	padding: 0;
 	z-index: 999;
-
-
 }
 main {
 	display: flex;
@@ -87,22 +111,12 @@ main {
 	}
 	#control {
 		flex-basis: 3%;
-		align-self: center;
+		align-self: flex-start;
 	}
-	#control button {
-		background-color: black;
-		color: white;
-		height: 100%;
-		padding: 10px;
-		margin: 10px;
-	}
+
 	#output {
-		flex-basis: 48%;
 		background-color: #fff;
 		padding: 20px;
-
-		width: 170mm;
-		height: 240mm;
 		font-weight: bold;
 	}
 
@@ -136,7 +150,6 @@ main {
 		font-weight: bold;
     font-family: monospace;
     white-space: pre-wrap;
-
 	}
 
 }
