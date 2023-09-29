@@ -149,6 +149,7 @@ main {
 		background-color: #fff;
 		border: none;
 		width: 170mm;
+		margin-left: 18mm;
 		font-weight: bold;
     font-family: monospace;
     white-space: pre-wrap;
